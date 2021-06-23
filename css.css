@@ -1,16 +1,42 @@
- @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,700&display=swap');
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Light.otf") format("opentype");
+    font-style: normal;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-LightItalic.otf") format("opentype");
+    font-style: italic;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-BoldItalic.otf") format("opentype");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Black.otf") format("opentype");
+    font-weight: 900;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-	font-size: 14px;
+    font-weight: normal;
+	font-size: 15px;
 	line-height: 140%;
 	font-variant-numeric: oldstyle-nums;
 }
 
 b {
-    font-weight: 700;
+    font-weight: bold;
 }
+
 
 h1{
     font-weight: 900;
