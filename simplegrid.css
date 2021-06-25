@@ -138,7 +138,7 @@ body {
 		padding-right: 0px;
 		hyphens: auto;
 	}
-	
+
 	[class*='col-'] {
 		width: auto;
 		float: none;
@@ -151,4 +151,3 @@ body {
 		hyphens: auto;
 	}
 }
-
