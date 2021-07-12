@@ -1,32 +1,32 @@
 @font-face {
-    font-family: Roboto;
-    src: url("./fonts/Roboto-Light.otf") format("opentype");
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-Regular.otf") format("opentype");
     font-style: normal;
 }
 @font-face {
-    font-family: Roboto;
-    src: url("./fonts/Roboto-Bold.otf") format("opentype");
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-Bold.otf") format("opentype");
     font-weight: bold;
 }
 @font-face {
-    font-family: Roboto;
-    src: url("./fonts/Roboto-LightItalic.otf") format("opentype");
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-RegularIt.otf") format("opentype");
     font-style: italic;
 }
 @font-face {
-    font-family: Roboto;
-    src: url("./fonts/Roboto-BoldItalic.otf") format("opentype");
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-BoldIt.otf") format("opentype");
     font-weight: bold;
     font-style: italic;
 }
 @font-face {
-    font-family: Roboto;
-    src: url("./fonts/Roboto-Black.otf") format("opentype");
+    font-family: SourceSansPro;
+    src: url("./fonts/SourceSansPro-Black.otf") format("opentype");
     font-weight: 900;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'SourceSansPro', sans-serif;
     font-weight: normal;
 	font-size: 16px;
 	line-height: 140%;
