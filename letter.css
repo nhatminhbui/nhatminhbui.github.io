@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital@0;1&family=Nunito+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin-top: 33px;
+    color: #271c46;
+    background: #f1ac95;
+    background-image: url("letter-bg.png");
+  	background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+  font-family: 'Gentium Book Plus', serif;
+  font-size: 52px;
+  margin-bottom: -10px;
+  letter-spacing: -1.6px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 12px;
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+p {
+  margin: 0 10px;
+  font-size: 14px;  
+}
+
+.wrap {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+  margin: 120px 0 50px;
+}
+
+input {
+  border: none;
+  margin: 0 auto;
+  width: 94%;
+  max-width: 600px;
+  display: block;
+  padding: 13px;
+  background: white;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #353f4d;
+  text-align: center;
+  transition: .6s;
+  font-family: 'Gentium Book Plus', serif;
+  font-style: italic;
+  font-size: 24px;
+}
+
+input:focus {
+  outline-offset: 0px !important;
+  outline: none !important;
+  box-shadow: 0 16px 24px 0 rgba(0,0,0,.1);
+}
+input:hover {
+    box-shadow: 0 16px 24px 0 rgba(0,0,0,.1);
+}
+
+
+button {
+ text-decoration: none;
+ position: relative;
+ border: none;
+ font-size: 16px;
+ font-family: inherit;
+ color: #fff;
+ width: 11.4em;
+ height: 2.4em;
+ line-height: 2em;
+ text-align: center;
+ background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+ background-size: 300%;
+ border-radius: 30px;
+ z-index: 1;
+ display: block;
+  margin: 28px auto;
+}
+
+button:hover {
+ animation: ani 8s linear infinite;
+ border: none;
+}
+
+@keyframes ani {
+ 0% {
+  background-position: 0%;
+ }
+
+ 100% {
+  background-position: 400%;
+ }
+}
+
+button:before {
+ content: '';
+ position: absolute;
+ top: -5px;
+ left: -5px;
+ right: -5px;
+ bottom: -5px;
+ z-index: -1;
+ background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+ background-size: 400%;
+ border-radius: 35px;
+ transition: 1s;
+}
+
+button:hover::before {
+ filter: blur(20px);
+}
+
+button:active {
+ background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 40px;  
+  }
+  input {
+  width: 94%;
+  max-width: 600px;
+  display: block;
+  padding: 12px;
+  font-size: 20px;
+}
+
+}
+
+
