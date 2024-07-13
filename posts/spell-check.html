@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <title>Create Role in Postgres</title>
+     
+     <link rel="icon" href="../favicon.ico">
+     <link rel="apple-touch-icon" href="../favicon.ico">	
+     
+	<link rel="stylesheet" type="text/css" href="prettify.css">
+	<script type="text/javascript" src="prettify.js"></script>
+
+     <style>a{color:#00a;} a:visited{color:#00a;}dt{font-weight:bold;}</style>
+</head>
+
+<body onload="prettyPrint()"  style="max-width: 52em; margin-left: 2em;">
+
+<div align="right">
+	<i>Jul 2024</i>
+</div>
+<h1>Spelling Checker</h1>
+
+<br />
+
+Here's how to create a role that can log in, but don't give it a password:
+
+<pre class="prettyprint">
+CREATE ROLE nhatbui LOGIN;
+</pre>
+
+And here is creating a role with a password that is valid until the end of 2022. After one second has ticked in 2023, the password is no longer valid:
+<pre class="prettyprint">
+CREATE USER nhatbui WITH PASSWORD 'st@bl3nhAt' VALID UNTIL '2023-01-01';
+</pre>
+
+The syntax is fine. But what could possibly go wrong? Oh dear, your password will appear as plain text somewhere in the log file; it can be stolen in no easier way. To do it properly, we first create a role that can log in but don't give it a password:
+<pre class="prettyprint">
+CREATE ROLE nhatbui LOGIN;
+</pre>
+
+Once the role <code>nhatbui</code> is created, we can then give it a password with this command:
+
+<pre class="prettyprint">
+\password nhatbui
+</pre>
+
+The terminal now will ask you to type in the new password. Just like other passwords, it will be hidden in the terminal. So just type without wondering. Here's what mine displays:
+<pre class="prettyprint">
+postgres=# \password nhatbui
+Enter new password for user "nhatbui": 
+Enter it again: 
+</pre>
+
+As far as I am aware, Postgres will hash the password before storing it, unless the supplied string is already hashed. So you don't have to hash it.
+
+<h3>Further reading</h3>
+<ul>
+	<li><a href="https://www.postgresql.org/docs/current/sql-createrole.html">https://www.postgresql.org/docs/current/sql-createrole.html</li>
+    <li><a href="https://stackoverflow.com/questions/60083459/how-to-create-postgresql-user-without-any-trace-of-password-in-logs">https://stackoverflow.com/questions/60083459/how-to-create-postgresql-user-without-any-trace-of-password-in-logs</a>
+</ul>
+<hr />
+<a href="https://nhatminhbui.github.io/posts">See all posts</a>
+</body>
+</html>
